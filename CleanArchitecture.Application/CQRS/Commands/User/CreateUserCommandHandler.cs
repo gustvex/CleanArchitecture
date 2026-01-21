@@ -15,12 +15,23 @@ public class CreateUserCommandHandler : IRequestHandler<CreateUserCommand>
 
     public async Task Handle(CreateUserCommand request, CancellationToken cancellationToken)
     {
+        
         var user = new Domain.Entities.User(
             request.Dto.Username,
             request.Dto.Useremail,
-            request.Dto.UserPhone
+           CleanPhoneNumber(request.Dto.UserPhone)
+           
         );
 
         await _repository.AddAsync(user);
+    }
+
+    private string CleanPhoneNumber(string phoneNumber)
+    {
+        if (string.IsNullOrWhiteSpace(phoneNumber))
+            return string.Empty;
+
+        // Remove caracteres não numéricos (parênteses, hífens, espaços, etc)
+        return new string(phoneNumber.Where(char.IsDigit).ToArray());
     }
 }

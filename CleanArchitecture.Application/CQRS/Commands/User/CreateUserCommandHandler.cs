@@ -17,7 +17,8 @@ public class CreateUserCommandHandler : IRequestHandler<CreateUserCommand>
     {
         var user = new Domain.Entities.User(
             request.Dto.Username,
-            request.Dto.Useremail
+            request.Dto.Useremail,
+            request.Dto.UserPhone
         );
 
         await _repository.AddAsync(user);

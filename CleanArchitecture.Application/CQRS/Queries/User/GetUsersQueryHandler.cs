@@ -21,7 +21,9 @@ public class GetUsersQueryHandler : IRequestHandler<GetUsersQuery, IEnumerable<U
         {
             Id = u.Id,
             Username = u.Username,
-            Useremail = u.Useremail
+            Useremail = u.Useremail,
+            UserPhone = u.Userphone
+            
         });
     }
 }

@@ -20,6 +20,7 @@ public class CreateUserCommandHandler : IRequestHandler<CreateUserCommand>
             request.Dto.Username,
             request.Dto.Useremail,
            CleanPhoneNumber(request.Dto.UserPhone)
+           
         );
 
         await _repository.AddAsync(user);

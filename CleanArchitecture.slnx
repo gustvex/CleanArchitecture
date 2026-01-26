@@ -1,7 +1,9 @@
 <Solution>
-  <Project Path="CleanArchitecture.Application/CleanArchitecture.Application.csproj" />
-  <Project Path="CleanArchitecture.CrossCutting/CleanArchitecture.CrossCutting.csproj" />
-  <Project Path="CleanArchitecture.Domain/CleanArchitecture.Domain.csproj" />
-  <Project Path="CleanArchitecture.Infrastructure/CleanArchitecture.Infrastructure.csproj" />
-  <Project Path="CleanArchitecture.Presentation/CleanArchitecture.Presentation.csproj" />
+  <Folder Name="/Application/">
+    <Project Path="Application/Application.csproj" />
+  </Folder>
+  <Project Path="CrossCutting/CrossCutting.csproj" />
+  <Project Path="Domain/Domain.csproj" />
+  <Project Path="Infrastructure/Infrastructure.csproj" />
+  <Project Path="Presentation/Presentation.csproj" />
 </Solution>

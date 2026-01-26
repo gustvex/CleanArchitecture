@@ -46,14 +46,14 @@ dotnet restore
 As migrations serão aplicadas automaticamente ao executar o projeto, mas você pode aplicá-las manualmente com:
 
 ```bash
-cd CleanArchitecture.Presentation
-dotnet ef database update --project ../CleanArchitecture.Infrastructure
+cd Presentation
+dotnet ef database update --project ../Infrastructure
 ```
 
 ### 5. Execute o projeto
 
 ```bash
-cd CleanArchitecture.Presentation
+cd Presentation
 dotnet run
 ```
 
@@ -66,11 +66,11 @@ O projeto estará disponível em:
 
 ```
 CleanArchitecture/
-├── CleanArchitecture.Domain/          # Entidades e interfaces
-├── CleanArchitecture.Application/     # CQRS, DTOs e lógica de negócio
-├── CleanArchitecture.Infrastructure/  # DbContext, Repositories e Migrations
-├── CleanArchitecture.CrossCutting/    # Injeção de dependência
-└── CleanArchitecture.Presentation/    # API Controllers e configuração
+├── Domain/          # Entidades e interfaces
+├── Application/     # CQRS, DTOs e lógica de negócio
+├── Infrastructure/  # DbContext, Repositories e Migrations
+├── CrossCutting/    # Injeção de dependência
+└── Presentation/    # API Controllers e configuração
 ```
 
 ## 🔒 Segurança
